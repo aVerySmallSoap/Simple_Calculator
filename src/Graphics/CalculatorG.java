@@ -68,6 +68,7 @@ public class CalculatorG implements IGraphics {
         historyButton.addActionListener(e ->
                 {
                     onHistoryClickEvent event = new onHistoryClickEvent();
+                    event.refreshPanel();
                     event.getHistory(numF);
                 }
         );
@@ -121,8 +122,8 @@ public class CalculatorG implements IGraphics {
         buttonsPanel.add(bEquals);
         bEquals.addActionListener(e -> {
             onHistoryClickEvent history = new onHistoryClickEvent();
-            history.getArray().add(numF.getText());
             history.refreshPanel();
+            history.getArray().add(numF.getText());
 
             onEqualClickEvent equal = new onEqualClickEvent();
             numF.setText(equal.compileStatement(numF.getText()));
