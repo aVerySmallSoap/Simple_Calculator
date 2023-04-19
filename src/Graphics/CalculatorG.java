@@ -11,7 +11,7 @@ import java.awt.*;
 
 public class CalculatorG implements IGraphics {
 
-    ImageIcon Logo = new ImageIcon("./src/Images/Logo.png");
+    ImageIcon Logo = new ImageIcon("./src/Images/Logo_256.png");
     ImageIcon history = new ImageIcon("./src/Images/icon_history.png");
 
     @Override
